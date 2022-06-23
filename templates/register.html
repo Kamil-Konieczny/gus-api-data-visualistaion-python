@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+  <style>
+    #registerForm{
+    margin-left:35%;
+    margin-top:10%;
+    background-color:#4d4d4d
+;
+    text-align: center;
+    width:30%;
+    padding-top:5%;
+    padding-bottom:5%;
+    }
+    body{
+    background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+<div id="registerForm">
+    <h1 style="color:white; font-size:50px;">Register</h1>
+
+    <form method="POST" action="" >
+        {{ form.hidden_tag() }}
+      <div style="padding-bottom:3px;">
+        {{ form.username }}
+      </div>
+      </br>
+      <div style="padding-bottom:3px;">
+        {{ form.password }}
+      </div>
+            </br>
+ <div style="padding-bottom:3px;">
+        {{ form.submit }}
+         </div>
+
+    </form>
+ <div style="padding-bottom:7px;">
+    <a href="{{ url_for('login') }}" style="color:white;">Already have an account? Log In</a>   </div>
+  </div>
+</body>
+
+</html>
